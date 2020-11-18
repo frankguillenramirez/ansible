@@ -1,0 +1,21 @@
+---
+- hosts: grupo2
+  become: true
+  tasks:
+    - name: Validar archivo
+      stat:
+        path: /root/123.txt
+      register: file
+
+    - block:
+      - name: Crear nuevo archivo si no existe
+        copy:
+          content: "nuevo archivo -  cuando no existe"
+          dest: /root/321.txt
+        rescue:
+        - name: Crear nuevo archivo si no existe
+          copy:
+            content: "blablabla"
+            dest: /root/321.txt
+...
+

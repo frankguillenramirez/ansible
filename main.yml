@@ -1,0 +1,17 @@
+
+---
+
+- hosts: grupo2
+  become: true
+  tasks:
+    - name: Instalar apache
+      yum:
+        name: XXXXXXXXX
+        state: latest
+      ignore_errors: true
+      register: instalacion
+
+    - debug: var=instalacion
+
+....
+
