@@ -1,0 +1,9 @@
+16:24:11 [INFO ] Using the docker image: docker.prod.walmart.com/walmartlabs/concord-ansible-2.6:latest
+16:24:11 [INFO ] Using extra /etc/hosts records: []
+16:24:11 [INFO ] Using a playbook: main.yml
+16:24:11 [INFO ] Using the private key: /tmp/concord/prefork1806172467276868342/payload/.tmp/private796583484796999638.key
+16:24:31 ANSIBLE: Error response from daemon: Get https://docker.prod.walmart.com/v2/walmartlabs/concord-ansible-2.6/manifests/latest: Get https://docker.prod.walmart.com/token?scope=repository%3Awalmartlabs%2Fconcord-ansible-2.6%3Apull&service=docker.prod.walmart.com%3A-1: net/http: TLS handshake timeout
+16:24:31 [WARN ] Playbook is finished with code 1
+16:24:32 [ERROR] main -> unhandled exception
+java.lang.IllegalStateException: Process finished with exit code 1
+	at com.walmartlabs.concord.plugins.ansible.v1.RunPlaybookTask2.run(RunPlaybo
